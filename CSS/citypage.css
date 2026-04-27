@@ -1,0 +1,240 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root { /*  بدل الألوان العادية عشان أختار من باليت الألوان بتاعت اللوجو وعامل بس كد مسميات مختلفة بدل الـ built in*/
+  --main-blue: #2E86AB; 
+  --light-blue: #A5D8DD;
+  --accent-orange:#f18f01;
+  --dark-blue: #2D3047;
+  --off-white: #F7F7F2;
+  --pure-white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--off-white);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(135deg, var(--main-blue), var(--light-blue)); /* تدرج للألوان عشان المظهر */
+  color: var(--text-light);
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  border: 3px solid var(--pure-white);
+  border-radius: 100%;
+  object-fit: contain;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
+}
+
+.title-container h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+section {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 1000px;
+  width: 90%;
+  background-color: var(--pure-white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: var(--main-blue);
+  border-bottom: 2px solid var(--accent-orange);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: var(--dark-blue);
+  margin: 1.5rem 0 1rem;
+}
+
+.services-list {
+  padding-left: 1.2rem;
+}
+
+.services-list > li {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.services-list ul {
+  padding-left: 1.5rem;
+  list-style-type: square;
+  color: var(--accent-orange);
+  font-weight: normal;
+}
+
+.services-list ul li {
+  margin-bottom: 0.5rem;
+}
+
+.smart-systems {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  white-space: nowrap; /* تحسين على الموبايل */
+}
+
+.smart-systems th,
+.smart-systems td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.smart-systems th {
+  background-color: var(--main-blue);
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.smart-systems tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.smart-systems tr:hover {
+  background-color: #e9f7fb;
+}
+
+.contact-info {
+  background-color: var(--light-blue);
+  padding: 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-orange);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.btn-link:hover,
+.btn-link:focus {
+  background-color: #e67e00;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.home-link, .deci-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent-orange);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.home-link:hover,
+.home-link:focus,
+.deci-link:hover,
+.deci-link:focus {
+  background-color: #e67e00;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* عشان شاشة تلفوني صغيره بأمانة */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 1.2rem;
+    width: 85%;
+  }
+
+  .smart-systems {
+    font-size: 0.85rem;
+  }
+
+  .smart-systems th,
+  .smart-systems td {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .services-list ul {
+    padding-left: 1rem;
+  }
+
+  .smart-systems {
+    display: block;
+    overflow-x: auto;
+  }
+}
